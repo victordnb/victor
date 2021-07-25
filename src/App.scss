@@ -3,11 +3,21 @@
 
   .sections{
     width: 100%;
-    height: calc(100% - 70px);
+    //height: calc(100% - 71px);
     background-color: lightpink;
     position: relative;
     top: 70px;
+    scroll-behavior: smooth; //oculta el scroll en la página
+    scroll-behavior: smooth-scroll; //oculta el scroll en la página
+    //scroll-snap-type: y mandatory;
+    height: 100vh;
+    overflow-y: scroll; //force scroll
+    //height: 100vh;
+    //scroll-snap-type: mandatory;
+    scroll-snap-points-y: repeat(100vh);
     scroll-snap-type: y mandatory;
+
+    overflow:inherit;
     scrollbar-width: none; //this is for firefox
     &::-webkit-scrollbar{
       display: none;
