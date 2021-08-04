@@ -9,20 +9,20 @@ import Contact from './componentes/contact/Contact'
 import "./App.scss"
 
 function App() {
-  
+  const [menuOpen, setMenuOpen] = useState(true)
   return (
     <div className="app">
-      <Topbar/>
+      <Topbar menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
       <div className="sections">
         <Intro/>
         <Portfolio/>
         <Works/>
-        <Blog/>
+        <Blog/> 
         <Testimonial/>
         <Contact/>
       </div>
     </div>
-  )
+  );
 }
 
 export default App
